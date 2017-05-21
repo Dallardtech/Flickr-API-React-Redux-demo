@@ -22,7 +22,7 @@ class Search extends Component {
     _handleKeyPress(e) {
         if (e.key === 'Enter') {
             clearPosts();
-            getPosts(0, this.state.searchTerm);
+            getPosts(1, this.state.searchTerm);
         }
     }
 
