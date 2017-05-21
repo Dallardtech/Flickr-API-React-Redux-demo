@@ -1,0 +1,26 @@
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+@mixin animate($speed) {
+    -webkit-transition: all $speed+s ease;
+    transition: all $speed+s ease;
+}
+
+
+@mixin linear-gradient-b($args...) {
+    background-image: -o-linear-gradient($args);
+    background-image: -moz-linear-gradient($args);
+    background-image: -webkit-linear-gradient($args);
+    background-image: linear-gradient($args);
+}
+

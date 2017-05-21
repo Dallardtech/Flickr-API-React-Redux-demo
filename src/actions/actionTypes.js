@@ -1,0 +1,6 @@
+// Action for successful return of posts data
+export const GET_POSTS_SUCCESS = 'GET_POSTS_SUCCESS';
+export const GET_PAGINATION_INFO_SUCCESS = 'GET_PAGINATION_INFO_SUCCESS';
+export const CLEAR_POSTS_SUCCESS = 'CLEAR_POSTS_SUCCESS';
+export const SET_LOADING_SUCCESS = 'SET_LOADING_SUCCESS';
+
