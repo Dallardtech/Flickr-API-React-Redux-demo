@@ -20,6 +20,8 @@ let cssLoaders = [
 module.exports = {
     devtool: 'eval',
     entry: [
+        //(babel polyfill to fix IE9 Axios Promise issue)
+        "babel-polyfill",
         './src/index'
     ],
     output: {
