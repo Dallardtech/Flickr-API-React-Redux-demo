@@ -1,77 +1,63 @@
+@import '../../sass/_vars.scss';
+@import '../../sass/_mixins.scss';
+
+.pagination {
+    position: fixed;
+    bottom: -8px;
+    right: 0;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    @include linear-gradient-b(0deg, $body-color, rgba(0,0,0,0));
+    li {
+        display: inline-block;
+        padding: 8px 0 8px 8px;
+        background: #fff;
+        &:last-child {
+            margin-right: 0;
+            padding-right: 8px;
+        }
+        &.disabled {
+            a {
+                cursor: not-allowed;
+            }
+        }
+        a {
+            display: block;
+            padding: 5px 10px 4px 10px;
+            @include linear-gradient-b(0deg, $brand-color, lighten($brand-color, 5%));
+            opacity: 1;
+            @include animate(0.6);
+
+            @media (min-width: 480px) {
+                min-width: 36px;
+            }
+            color: #fff;
+            font-size: 20px;
+            &:HOVER {
+                background: lighten($brand-color, 10%);
+            }
+            &:ACTIVE {
+                background: darken($brand-color, 10%);
+            }
+            @media (max-width: 480px) {
+                padding: 5px 8px 4px;
+            }
+        }
+        &.active {
+            a {
+                background: yellow;
+                color: $brand-color;
+            }
+        }
+    }
+}
+
 .waypoint-infinite {
     clear: both;
     width: 200px;
     height: 200px;
     margin-top: -600px;
-}
-
-.loader {
-    padding: 40px;
-    img {
-        width: 60px;
-    }
-}
-
-
-
-$base-line-height: 40px;
-$white: #918fe8;
-$off-white: rgba(#918fe8, 0.2);
-$spin-duration: 1s;
-$pulse-duration: 750ms;
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes pulse {
-    50% {
-        background: $white;
-    }
-}
-
-.loading {
-    border-radius: 50%;
-    width: $base-line-height;
-    height: $base-line-height;
-    border: .25rem solid $off-white;
-    border-top-color: $white;
-    animation: spin $spin-duration infinite linear;
-    margin: 0 auto;
-    &--double {
-        border-style: double;
-        border-width: .5rem;
-    }
-}
-
-.loading-pulse {
-    position: relative;
-    width: ($base-line-height / 4);
-    height: $base-line-height;
-    background: $off-white;
-    animation: pulse $pulse-duration infinite;
-    animation-delay: ($pulse-duration / 3);
-    &:before, &:after {
-        content: '';
-        position: absolute;
-        display: block;
-        height: ($base-line-height / 1.5);
-        width: ($base-line-height / 4);
-        background: $off-white;
-        top: 50%;
-        transform: translateY(-50%);
-        animation: pulse $pulse-duration infinite;
-    }
-    &:before {
-        left: -($base-line-height / 2);
-    }
-    &:after {
-        left: ($base-line-height / 2);
-        animation-delay: ($pulse-duration / 1.5);
-    }
 }

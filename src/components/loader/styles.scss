@@ -1,0 +1,63 @@
+@import '../../sass/_vars.scss';
+@import '../../sass/_mixins.scss';
+
+.loader {
+  padding: 40px;
+  img {
+    width: 60px;
+  }
+  .loading {
+    border-radius: 50%;
+    width: $base-loader-height;
+    height: $base-loader-height;
+    border: .25rem solid rgba($brand-color, 0.2);
+    border-top-color: $brand-color;
+    animation: spin $spin-duration infinite linear;
+    margin: 0 auto;
+    &--double {
+      border-style: double;
+      border-width: .5rem;
+    }
+  }
+  .loading-pulse {
+    position: relative;
+    width: ($base-loader-height / 4);
+    height: $base-loader-height;
+    background: rgba($brand-color, 0.2);
+    animation: pulse $pulse-duration infinite;
+    animation-delay: ($pulse-duration / 3);
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: ($base-loader-height / 1.5);
+      width: ($base-loader-height / 4);
+      background: rgba($brand-color, 0.2);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: pulse $pulse-duration infinite;
+    }
+    &:before {
+      left: -($base-loader-height / 2);
+    }
+    &:after {
+      left: ($base-loader-height / 2);
+      animation-delay: ($pulse-duration / 1.5);
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    background: $brand-color;
+  }
+}

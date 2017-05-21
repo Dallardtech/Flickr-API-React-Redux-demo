@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import Search from '../Search'
+import Search from '../search'
 import style from './style.scss'
-import { getPosts, clearPosts } from '../../api/postApi'
-
 
 class Header extends Component {
 
@@ -17,7 +15,7 @@ class Header extends Component {
                 <div className="container">
                     <Search />
                     <span className="app-label"><i className="fa fa-file-image-o"></i> &nbsp;React & Redux demo application</span>
-                    <Link className="github-link" to="https://github.com/Dallardtech/Flickr-React-Redux-demo" target="_blank"><i className="fa fa-github"></i></Link>
+                    <Link className="github-link" to="https://github.com/Dallardtech/Flickr-API-React-Redux-demo" target="_blank"><i className="fa fa-github"></i></Link>
                 </div>
             </div>
         )

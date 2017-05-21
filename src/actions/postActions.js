@@ -2,7 +2,7 @@ import * as types from './actionTypes';
 
 export function getPhotosSuccess(photos) {
     return {
-        type: types.GET_POSTS_SUCCESS,
+        type: types.GET_PHOTOS_SUCCESS,
         photos
     };
 }
@@ -16,7 +16,7 @@ export function getPaginationInfoSuccess(pagination) {
 
 export function clearPostsSuccess() {
     return {
-        type: types.CLEAR_POSTS_SUCCESS
+        type: types.CLEAR_PHOTOS_SUCCESS
     };
 }
 

@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
-import postReducer from './postReducer'
+import photosReducer from './photosReducer'
 
-const todoApp = combineReducers({
-  postState: postReducer
+const photoApp = combineReducers({
+  postState: photosReducer
 })
 
-export default todoApp
+export default photoApp
 
 
 

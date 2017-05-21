@@ -1,4 +1,4 @@
-import * as types from '../actions/actionTypes';
+import * as types from '../actions/actionTypes'
 
 const initialState = {
     loading: true,
@@ -10,15 +10,15 @@ const initialState = {
     }
 };
 
-const postReducer = function(state = initialState, action) {
+const photoReducer = function(state = initialState, action) {
 
     switch(action.type) {
-        case types.GET_POSTS_SUCCESS:
+        case types.GET_PHOTOS_SUCCESS:
             return Object.assign({}, state, { photos: state.photos.concat(action.photos) });
     }
 
     switch(action.type) {
-        case types.CLEAR_POSTS_SUCCESS:
+        case types.CLEAR_PHOTOS_SUCCESS:
             return Object.assign({}, state, { photos: initialState.photos });
     }
 
@@ -36,4 +36,4 @@ const postReducer = function(state = initialState, action) {
 
 };
 
-export default postReducer;
+export default photoReducer

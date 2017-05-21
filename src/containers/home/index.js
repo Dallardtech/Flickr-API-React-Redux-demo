@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Card from '../../components/card'
-import classNames from 'classnames'
+import Loader from '../../components/loader'
 import Waypoint from 'react-waypoint';
 import Pagination from "react-js-pagination";
 import { getPosts, clearPosts } from '../../api/postApi'
@@ -70,10 +70,7 @@ class Home extends Component {
                 </div>
 
                 { this.props.loading &&
-                    <div className="loader text-center">
-                        <div className="loading"></div>
-                        <p>LOADING IMAGES</p>
-                    </div>
+                    <Loader text="LOADING IMAGES"/>
                 }
 
                 { !this.props.loading && this.state.activePage == this.props.pagination.pages &&
@@ -108,4 +105,4 @@ const mapStateToProps = function(store) {
     };
 };
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(Home)

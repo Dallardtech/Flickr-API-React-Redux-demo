@@ -40,60 +40,6 @@ a {
   margin: 0 -8px;
 }
 
-.pagination {
-  /*border-top: 1px solid #ddd;
-  background: #fff;*/
-  position: fixed;
-  bottom: -8px;
-  right: 0;
-  left: 0;
-  list-style-type: none;
-  margin: 0;
-  padding: 8px;
-  text-align: center;
-  @include linear-gradient-b(0deg, $body-color, rgba(0,0,0,0));
-  li {
-    display: inline-block;
-    padding: 8px 0 8px 8px;
-    background: #fff;
-    &:last-child {
-      margin-right: 0;
-      padding-right: 8px;
-    }
-    &.disabled {
-      a {
-        cursor: not-allowed;
-      }
-    }
-    a {
-      display: block;
-      padding: 5px 10px 4px 10px;
-      @include linear-gradient-b(0deg, $brand-color, lighten($brand-color, 5%));
-      opacity: 1;
-      @include animate(0.6);
-      min-width: 36px;
-      color: #fff;
-      font-size: 20px;
-      &:HOVER {
-        background: lighten($brand-color, 10%);
-      }
-      &:ACTIVE {
-        background: darken($brand-color, 10%);
-      }
-      @media (max-width: 480px) {
-        padding: 5px 8px 4px;
-      }
-    }
-    &.active {
-      a {
-        background: yellow;
-        color: $brand-color;
-        //opacity: 0.4;
-      }
-    }
-  }
-}
-
 .text-center {
   text-align: center;
 }

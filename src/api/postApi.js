@@ -11,7 +11,6 @@ export function getPosts(page, searchTerm) {
 
     store.dispatch(setLoadingSuccess(true));
 
-    //https://api.flickr.com/services/feeds/photos_public.gne?format=json
     axios.get('https://api.flickr.com/services/rest', {
         params: {
             method: "flickr.photos.search",

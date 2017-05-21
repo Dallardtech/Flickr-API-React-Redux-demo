@@ -3,7 +3,6 @@ import { render } from 'react-dom'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import App from './app'
 import Home from './containers/home'
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import store from './store'
 
@@ -13,7 +12,6 @@ const routes = (
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Home}/>
-            <Route path="home" component={Home}/>
         </Route>
     </Router>
 );

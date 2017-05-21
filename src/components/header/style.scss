@@ -14,8 +14,8 @@
   height: 60px;
   z-index: 1;
   @include linear-gradient-b(0deg, $brand-color, lighten($brand-color, 5%));
-  @media (max-width: 1000px) {
-    width: $max-container-width;
+  @media (max-width: $max-container-width) {
+    padding: 0 20px;
   }
   .search {
     float: left;
@@ -24,7 +24,7 @@
   }
   .app-label {
     display: inline-block;
-    margin: 20px 0 0 30px;
+    margin: 20px 0 0 20px;
     @media (max-width: 650px) {
       display: none;
     }
