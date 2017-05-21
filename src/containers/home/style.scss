@@ -13,6 +13,7 @@
     @include linear-gradient-b(0deg, $body-color, rgba(0,0,0,0));
     li {
         display: inline-block;
+        display: -ms-inline-grid;
         padding: 8px 0 8px 8px;
         background: #fff;
         &:last-child {
